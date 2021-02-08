@@ -27,7 +27,7 @@ img {
 }
 
 .wrap {
-    height: 100%;
+    min-width: 980px;
 }
 
 .blind {
@@ -39,7 +39,7 @@ img {
     clip: rect(0, 0, 0, 0);
 }
 
-header {
+.head_page {
     position: fixed;
     top: 0;
     left: 0;
@@ -58,34 +58,29 @@ header {
     width: 106px;
 }
 
-.container {
-    margin-top: -66px;
-    min-height: 100%;
-}
-
 .company_invite {
-    margin: auto;
+    margin: 0 auto;
     background: url('../image/section_invite.jpg') no-repeat 50% 50% #fff;
     height: 750px;
 }
 
 .company_creator {
-    margin: auto;
+    margin: 0 auto;
     background: url('../image/section_creator.jpg') no-repeat 50% 50% #f9939d;
     height: 822px;
 }
 
 .company_store {
-    margin: auto;
+    margin: 0 auto;
     background: url('../image/section_store.jpg') no-repeat 50% 50% #d5e43f;
-    height: 784px;
-    padding-top: 300px;
+    height: 1084px;
 }
 
 .store_list {
-    white-space: normal;
-    width: 980px;
-    margin: auto;
+    display: block;
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 300px;
 }
 
 .store_list::after {
@@ -94,23 +89,22 @@ header {
     display: block;
 }
 
-.store_list li {
+.store_listone {
     margin: 0 0 20px 20px;
     float: left;
     height: 350px;
+    text-align: center;
 }
 
-.store_list li:nth-child(4n+1){
-    margin-left: 0;
-}
-
-.store_list li a {
-    display: inline-block;
+.store_link {
+    display: block;
     text-decoration: none;
     position: relative;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-.store_list li a:hover .img_intro, .store_list li a:focus .img_intro {
+.store_link:hover .img_intro, .store_link:focus .img_intro {
     display: block;
 }
 
@@ -119,12 +113,10 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    height: 170px;
-    width: 230px;
+    bottom: 0;
+    right: 0;
     background-color: rgba(96, 132, 2, 0.9);
-    border-radius: 10px;
     padding-top: 60px;
-    text-align: center;
 }
 
 .discount_per {
@@ -138,10 +130,6 @@ header {
     color: #fff;
 }
 
-.product_img {
-    border-radius: 10px;
-}
-
 .product_name {
     margin: 30px auto 0; 
     max-width: 210px;
@@ -150,7 +138,6 @@ header {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    text-align: center;
     line-height: 28px;
 }
 
@@ -160,7 +147,6 @@ header {
 }
 
 .product_price {
-    text-align: center;
     display: block;
     font-size: 28px;
     line-height: 40px;
@@ -174,54 +160,30 @@ header {
     text-align: center;
 }
 
-.recipe_head {
-    background: url("../image/section_recipe.png") no-repeat;
-    background-position: -160px 100px;
-    height: 299px;
-    width: 660px;
-    margin: auto;
-}
-
-.recipe_list {
-    display: inline-block;
-}
-
-.recipe_list::after {
-    clear: both;
-    content: '';
-    display: block;
-}
-
-.recipe_list li {
-    position: relative;
-    width: 480px;
-    height: 482px;
-    float: left;
-}
-
-.recipe_list li + li{
-    margin-left: 20px;
-}
 
 .recipe_img {
-    display: block;
-    background: url("../image/section_recipe.png") no-repeat;
-    height: 482px;
-    width: 480px;
-}
-
-.recipe_img.cake {
-    background-position: 0px -199px;
-}
-
-.recipe_img.pudding {
-    background-position: -500px -199px;
-}
-
-.recipe_view_box {
-    height: 91px;
+    background: url("../image/section_recipe.png") no-repeat 0 100px;
+    height: 681px;
+    width: 980px;
+    margin: 0 auto;
     position: relative;
-    margin-top: 50px;
+    padding-top: 100px;
+}
+
+.receipe_img_left{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 480px;
+    height: 482px;
+}
+
+.receipe_img_right{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 480px;
+    height: 482px;
 }
 
 .recipe_view {
@@ -229,15 +191,15 @@ header {
     background: url("../image/go_recipe.gif") no-repeat;
     height: 91px;
     width: 310px;
-    margin: auto;
+    margin: 50px auto 0;
 }
 
-.recipe_view:hover, .receipt_veiw:focus {
+.recipe_view:hover, .recipe_view:focus {
     background: url("../image/go_recipe_over.gif") no-repeat;
 }
 
 .company_qna {
-    padding-top: 50px;
+    padding: 100px 0;
 }
 
 .faq_img {
@@ -248,20 +210,19 @@ header {
     margin: auto;
 }
 
-.faq_list {
-    width: 900px;
+.faq_box {
+    width: 980px;
     margin: 30px auto 0;
     border-bottom: 1px solid #a1a5ad;
 }
 
-.faq_list li {
+.faq_list {
     border-top: 1px solid #a1a5ad;
 }
 
 .ques_box {
-    display: table;
-    width: 100%;
-    padding: 10px 0;
+    padding: 20px 80px 20px 60px;
+    position: relative;
 }
 
 .ques_text {
@@ -271,31 +232,39 @@ header {
 }
 
 .ques_q {
-    display: block;
-    background: url("../image/icon_question.gif") no-repeat 50% 50%; 
-    height: 24px;
-    width: 40px;
-    display: table-cell;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 920px;
+    bottom: 0;
+    background: url("../image/icon_question.gif") no-repeat 20px 20px; 
 }
 
-.ans_open {
-    display: table-cell;
-    background: url('../image/icon_arrow_down.gif') no-repeat #fff 50% 50%;
+.ans_slide {
+    background: url('../image/icon_arrow_down.gif') no-repeat #fff 25px 25px;
     border: 0;
-    width: 50px;
+    position: absolute;
+    top: 0;
+    left: 900px;
+    right: 0;
+    bottom: 0;
     cursor: pointer;
-    padding: 10px 0;
-    margin-left: auto;
+    width: 80px;
+    padding: 0;
+}
+
+.ans_slide.close {
+    background: url('../image/icon_arrow_up.gif') no-repeat #fff 25px 25px;
 }
 
 .answer_box {
+    display: none;
     background-color: #f7f8fa;
-    padding: 20px;
+    padding: 20px 0 20px 60px;
+    position: relative;
 }
 
-.answer_box::after {
-    clear: both;
-    content: '';
+.answer_box.view {
     display: block;
 }
 
@@ -306,11 +275,13 @@ header {
     line-height: 28px;
 }
 
-.ans_q {
-    background: url("../image/icon_answer.gif") no-repeat;
-    height: 21px;
-    width:30px;
-    float: left;
+.ans_a {
+    background: url("../image/icon_answer.gif") no-repeat 20px 20px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 920px;
+    bottom: 0;
 }
 
 .top_tab {
@@ -319,11 +290,10 @@ header {
     right: 0;
     background: url("../image/go_top.gif") no-repeat;
     height: 100px;
-    width:100px;
+    width: 100px;
 }
 
-footer {
-    margin-top: 100px;
+.foot_copyright {
     background-color: #e0e4eb;
     text-align: center;
 }
