@@ -92,7 +92,7 @@ img {
 .store_list li {
     margin: 0 0 20px 20px;
     float: left;
-    height: 350px;
+    padding-bottom: 40px;
     text-align: center;
     color: #1b1d21;
 }
@@ -164,24 +164,24 @@ img {
     height: 681px;
     width: 980px;
     margin: 0 auto;
-    position: relative;
     padding-top: 100px;
 }
 
-.receipe_img_left{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 480px;
-    height: 482px;
+.recipe_img::after {
+    clear: both;
+    content: '';
+    display: block;
 }
 
-.receipe_img_right{
-    position: absolute;
-    right: 0;
-    bottom: 0;
+.recipe_img_food {
+    margin: 201px 0 0 20px;
     width: 480px;
     height: 482px;
+    float: left;
+}
+
+.recipe_img_food:first-child {
+    margin-left: 0;
 }
 
 .recipe_view {
@@ -223,7 +223,6 @@ img {
 }
 
 .ques_text {
-    overflow: hidden;
     font-size: 20px;
     line-height: 28px;
 }
@@ -250,7 +249,7 @@ img {
     padding: 0;
 }
 
-.ans_slide.close {
+.faq_box .answer_open .ans_slide {
     background: url('../image/icon_arrow_up.gif') no-repeat #fff 25px 25px;
 }
 
@@ -261,7 +260,7 @@ img {
     position: relative;
 }
 
-.answer_box.view {
+.answer_open .answer_box {
     display: block;
 }
 
