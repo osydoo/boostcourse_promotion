@@ -89,11 +89,12 @@ img {
     display: block;
 }
 
-.store_listone {
+.store_list li {
     margin: 0 0 20px 20px;
     float: left;
     height: 350px;
     text-align: center;
+    color: #1b1d21;
 }
 
 .store_link {
@@ -102,6 +103,7 @@ img {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    color: #fff;
 }
 
 .store_link:hover .img_intro, .store_link:focus .img_intro {
@@ -122,19 +124,16 @@ img {
 .discount_per {
     margin-top: 50px;
     font-size: 65px;
-    color: #fff;
 }
 
 .discount_time {
     font-size: 20px;
-    color: #fff;
 }
 
 .product_name {
     margin: 30px auto 0; 
     max-width: 210px;
     font-size: 20px;
-    color: #1b1d21;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -150,7 +149,6 @@ img {
     display: block;
     font-size: 28px;
     line-height: 40px;
-    color: #1b1d21;
 }
 
 .company_recipe {
@@ -203,7 +201,6 @@ img {
 }
 
 .faq_img {
-    display: block;
     background: url("../image/title_faq.gif") no-repeat;
     height: 50px;
     width: 98px;
@@ -216,7 +213,7 @@ img {
     border-bottom: 1px solid #a1a5ad;
 }
 
-.faq_list {
+.faq_box li {
     border-top: 1px solid #a1a5ad;
 }
 
@@ -269,7 +266,6 @@ img {
 }
 
 .answer_text {
-    overflow: hidden;
     font-size: 16px;
     color: #60656e;
     line-height: 28px;
