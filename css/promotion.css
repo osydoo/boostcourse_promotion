@@ -92,9 +92,10 @@ img {
 .store_list li {
     margin: 0 0 20px 20px;
     float: left;
-    padding-bottom: 40px;
+    padding-bottom: 120px;
     text-align: center;
     color: #1b1d21;
+    position: relative;
 }
 
 .store_link {
@@ -103,7 +104,6 @@ img {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    color: #fff;
 }
 
 .store_link:hover .img_intro, .store_link:focus .img_intro {
@@ -119,6 +119,7 @@ img {
     right: 0;
     background-color: rgba(96, 132, 2, 0.9);
     padding-top: 60px;
+    color: #fff;
 }
 
 .discount_per {
@@ -131,6 +132,10 @@ img {
 }
 
 .product_name {
+    position: absolute;
+    top: 230px;
+    left: 0;
+    right: 0;
     margin: 30px auto 0; 
     max-width: 210px;
     font-size: 20px;
@@ -146,6 +151,10 @@ img {
 }
 
 .product_price {
+    position: absolute;
+    top: 288px;
+    left: 0;
+    right: 0;
     display: block;
     font-size: 28px;
     line-height: 40px;
